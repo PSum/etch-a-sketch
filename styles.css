@@ -4,17 +4,13 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(243, 243, 243);
-}
-
-.sketchArea{
-    display: flex;
-    flex: 1;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+}
+h1 {
     padding: 0;
     margin: 0;
-} 
+}
 
 .header,
 .footer {
@@ -25,17 +21,12 @@ body {
     padding: 0;
 }
 
-h1 {
-    padding: 0;
-    margin: 0;
+.sketchArea {
+    width: 50vh;
+    height: 50vh;
+    display: grid;
 }
 
-.horizontal,
-.vertical {
-    height: 10px;
-    width: 10px;
-    background-color: lightblue;
-    border: 1px solid black;
-    padding: 0;
-    margin: 0;
+.sketchBox {
+    border: solid black 1px;
 }

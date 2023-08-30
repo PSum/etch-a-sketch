@@ -1,18 +1,18 @@
 const container = document.querySelector(".sketchArea");
+let etchSize = 32;
+container.style.gridTemplateColumns = `repeat(${etchSize}, 1fr)`
+container.style.gridTemplateRows = `repeat(${etchSize}, 1fr)`
 
-let etchSize = 10;
 
-for (let i = 0; i < etchSize; i++) {
-    const newDiv = document.createElement("div");
-    // newDiv.textContent = `${i + 1}`;
-    newDiv.className = "horizontal"
-    for (let x = 0; x<etchSize; x++) {
-        const vertDiv = document.createElement("div");
-        // vertDiv.textContent = `${i + 1}.${x + 1}`;
-        vertDiv.className = "vertical";
-
-        newDiv.appendChild(vertDiv);
-
+function createArea (gridSize) {
+    let arraySize = gridSize * gridSize;
+    for (let i = 0; i < arraySize; i++){
+        let box = document.createElement("div");
+        // box.style.backgroundColor = "blue";
+        box.className = "sketchBox";
+        container.appendChild(box);
     }
-    container.appendChild(newDiv);
 }
+
+createArea(etchSize);
+
